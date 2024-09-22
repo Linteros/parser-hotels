@@ -15,7 +15,7 @@ for url in urls:
     pages = requests.get(url)
 
     # parser-lxml = Change html to Python friendly format
-    soup = BeautifulSoup(pages.text, 'lxml')
+    soup = BeautifulSoup(pages.text, 'html.parser')
 
     hotels = soup.find_all('div', class_= 'org-widget__in')
 
